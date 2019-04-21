@@ -1,0 +1,13 @@
+---
+# tasks file for common_role
+- name: yum upgrade
+  yum:
+    name: '*'
+    state: latest
+
+- name: install common packages
+  yum:
+    name:
+        - vim
+        - net-tools
+    state: present
